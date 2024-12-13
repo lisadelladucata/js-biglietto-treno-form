@@ -9,52 +9,62 @@
 <body>
     <main>
         <form action="" id="form">
+            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             <section>
-                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-                <div class="name">
-                    <label for="text">Nome Cognome</label>
-                    <input type="text" id="namesurname-field" required>
+                <div class="row">
+                    <div class="col">
+                        <div class="name">
+                            <label for="text">Nome Cognome</label>
+                            <input type="text" id="namesurname-field" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="kilometres">
+                            <label for="text">Km da percorrere</label>
+                            <input type="number" id="kilometres-field" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="age">
+                            <label for="select">Fascia d'età</label>
+                            <select name="age" id="age-field">
+                                <option value="overage">Maggiorenne</option>
+                                <option value="underage">Minorenne</option>
+                                <option value="65yearsold">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="kilometres">
-                    <label for="text">Km da percorrere</label>
-                    <input type="text" id="kilometres-field" required>
+                <div class="btn">
+                    <button type="submit" class="confirm">Genera</button>
                 </div>
-                <div class="age">
-                    <label for="select">Fascia d'età</label>
-                    <select name="age" id="age-field">
-                        <option value="overage">Maggiorenne</option>
-                        <option value="underage">Minorenne</option>
-                        <option value="65yearsold">Over 65</option>
-                    </select>
-                </div>
-            </section>
-            <section>
-                <button class="confirm">Genera</button>
             </section>
         </form>
         <section>
             <h1>IL TUO BIGLIETTO</h1>
-            <h3>Dettaglio passeggeri</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>NOME PASSEGGERO</th>
-                        <th>Offerta</th>
-                        <th>Carrozza</th>
-                        <th>Codice CP</th>
-                        <th>Costo biglietto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="namesurname">Jon Snow</td>
-                        <td id="discount">Biglietto standard</td>
-                        <td> Carrozza 5</td>
-                        <td>92911</td>
-                        <td id="total-price">2.10 €</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="card">
+                <h3>DETTAGLIO PASSEGGERI</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NOME PASSEGGERO</th>
+                            <th>OFFERTA</th>
+                            <th>CARROZZA</th>
+                            <th>CODICE CP</th>
+                            <th>COSTO BIGLIETTO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="namesurname"></td>
+                            <td id="discount"></td>
+                            <td id="carriage"></td>
+                            <td id="cp-code"></td>
+                            <td id="total-price"></td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div> 
         </section>
     </main>
     
